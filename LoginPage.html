@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login or Register - United Health Care</title>
+    <link rel="stylesheet" href="styleLoginPage.css">
+    <link rel="stylesheet" href="styleutil.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab&family=Roboto:wght@300&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab&family=Roboto:wght@300&display=swap" rel="stylesheet">
+</head>
+<header>
+    <div class="header-icon">
+        <img src="537-5377029_home-health-care-logo-hd-png-download.png" class="icon" alt="header-icon">
+    </div>
+    <div class="navigation-bar" id="nav">
+        <nav class="navbar">
+            <ul>
+                <li id="home"><a href="index.html">Home</a></li>
+                <li id="about"><a href="AboutUs.html">About</a></li>
+                <li class="highlight" id="login"><a href="LoginPage.html">Login/Register</a></li>
+                <li id="service"><a href="Services.html">Services</a></li>
+                <li id="contact"><a href="Contact.html">Contact</a></li>
+                <li id="community"><a href="Community.html">Community</a></li>
+                <li id="faq"><a href="FAQs.html">FAQs</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+<body>
+    <div class="body mtop mbot">
+        <div class="body-wrapper">
+            <div class="inner-body-wrapper">
+                <form action="/register" method="POST">
+                    <span class="login-text">Login</span>
+                    <div class="input-group ptop pbot">
+                        <span class="text mtop">Username</span>
+                        <br>
+                        <input type="text" placeholder="Username" required>
+                    </div>
+                    <div class="input-group">
+                        <span class="text">Password</span>
+                        <br>
+                        <input type="password" placeholder="Password" required>
+                    </div>
+                    <button class="login-btn"><a href="#">Login</a></button>
+                </form>
+            </div>
+            <div class="inner-body-wrapper">
+                <form action="/login" method="POST">
+                    <span class="register-text mbot">Register</span>
+                    <div class="input-group">
+                        <span class="text mtop">First name</span>
+                        <br>
+                        <input type="text" placeholder="First Name">
+                    </div>
+                    <div class="input-group">
+                        <span class="text">Last name</span>
+                        <br>
+                        <input type="text" placeholder="Last Name">
+                    </div>
+                    <div class="input-group">
+                        <span class="text">Username</span>
+                        <br>
+                        <input type="text" placeholder="Username">
+                    </div>
+                    <div class="input-group">
+                        <span class="text">Password</span>
+                        <br>
+                        <input type="password" placeholder="Password">
+                    </div>
+                    <div class="input-group">
+                        <span class="text">Date of birth</span>
+                        <br>
+                        <input type="text" id="dob" name="dob" autocomplete="off" required placeholder="DD/MM/YYYY">
+                    </div>
+                    <br>
+                    <button class="signup-btn"><a href="#">Register</a></button>
+                </form>
+                
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+<footer class="footer">
+    <div class="container">
+        <div class="footer-content">
+            <div class="footer-section about">
+                <h2>About Us</h2>
+                <p>We Expected the Unexpected.</p>
+                <div class="social-links">
+                    <a href="#" class="fa fa-facebook"></a>
+                    <a href="#" class="fa fa-twitter"></a>
+                    <a href="#" class="fa fa-linkedin"></a>
+                    <a href="#" class="fa fa-instagram"></a>
+                </div>
+            </div>
+            <div class="footer-section quick-links">
+                <h2>Quick Links</h2>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Services</a></li>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Contact</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                </ul>
+            </div>
+            <div class="footer-section contact">
+                <h2>Contact Us</h2>
+                <p>Email: unitedhealth24X7@gmail.com</p>
+                <p>Phone: +91 9876543210</p>
+            </div>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <p>&copy; 2023 United Home Healthcare. All rights reserved.</p>
+    </div>
+</footer>
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const loginForm = document.querySelector('.body-wrapper form');
+
+        loginForm.addEventListener('submit', function(event) {
+            event.preventDefault();
+
+            const usernameInput = document.querySelector('input[type="text"]');
+            const passwordInput = document.querySelector('input[type="password"]');
+
+            const username = usernameInput.value.trim();
+            const password = passwordInput.value.trim();
+
+            if (username === '' || password === '') {
+                alert('Please enter both username and password.');
+                return;
+            }
+
+            // Here, you can send the form data to the server using AJAX or fetch API
+            // For example, using fetch API
+            fetch('your-server-endpoint', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({
+                    username: username,
+                    password: password,
+                }),
+            })
+            .then(response => response.json())
+            .then(data => {
+                // Handle the server response here
+                console.log(data);
+                // Redirect to another page or perform actions based on the response
+            })
+            .catch(error => {
+                // Handle errors here
+                console.error('Error:', error);
+            });
+        });
+    });
+</script>
+</html>

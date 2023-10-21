@@ -1,0 +1,84 @@
+/*font sizes*/
+*{
+    margin: 0;
+}
+.font-size-60px{
+    font-size: 60px;
+}
+.font-size-50px{
+    font-size: 50px;
+}
+.font-size-40px{
+    font-size: 40px;
+}
+.font-size-30px{
+    font-size: 30px;
+}
+.font-size-20px{
+    font-size: 20px;
+}
+.font-size-25px{
+    font-size: 25px;
+}
+.font-size-15px{
+    font-size: 15px;
+}
+/*text decoration*/
+.u{
+    text-decoration: underline;
+}
+.i{
+    font-style: italic;
+}
+.b{
+    font-weight: 700;
+}
+.center{
+    text-align: center;
+}
+.p-w{
+    width: 10px;
+}
+.p{
+    padding:0px 50px;
+}
+.ps{
+    padding:0px 25px;
+}
+.pl{
+    padding:0px 100px;
+}
+a{
+    text-decoration: none;
+}
+a:hover{
+    text-decoration: underline;
+}
+.ptop{
+    padding-top: 25px;
+}
+.pbot{
+    padding-bottom: 25px;
+}
+.mtop{
+    margin-top: 50px;
+}
+.mbot{
+    margin-bottom: 50px;
+}
+.mstop{
+    margin-top: 25px;
+}
+.msbot{
+    margin-bottom: 25px;
+}
+.black{
+    color: black;
+}
+a{
+    color: white;
+}
+.navigation-bar li a{
+    color: white;
+    text-decoration: none;
+}
