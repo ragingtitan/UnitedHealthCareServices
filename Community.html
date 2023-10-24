@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Community - United HealthCare Services</title>
+    <link rel="stylesheet" href="styleCommunity.css">
+    <link rel="stylesheet" href="styleutil.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab&family=Roboto:wght@300&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab&family=Roboto:wght@300&display=swap" rel="stylesheet">
+</head>
+<header>
+    <div class="header-icon">
+        <img src="537-5377029_home-health-care-logo-hd-png-download.png" class="icon" alt="header-icon">
+    </div>
+    <div class="navigation-bar">
+        <nav class="navbar">
+            <ul>
+                <li id="home"><a href="index.html">Home</a></li>
+                <li id="about"><a href="AboutUs.html">About</a></li>
+                <li id="login"><a href="LoginPage.html">Login/Register</a></li>
+                <li id="service"><a href="Services.html">Services</a></li>
+                <li id="contact"><a href="Contact.html">Contact</a></li>
+                <li class="highlight" id="community"><a href="Community.html">Community</a></li>
+                <li id="faq"><a href="FAQs.html">FAQs</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+<body>
+    <div class="container">
+       <div class="leftsidebar">
+           <div class="implinks">
+                <a href="#"><img src="news.png">Latest news</a>
+                <a href="#"><img src="friends.png">Friends</a>
+                <a href="#"><img src="group.png">Group</a>
+                <a href="#">See More </a>
+           </div>
+           <div class="shortcut-links">
+               <p>Your Shortcuts</p>
+               <a href="#"><img src="shortcut-1.png">Video call</a>
+               <a href="#"><img src="shortcut-2.png">Appointments</a>
+               <a href="#"><img src="shortcut-3.png">Help</a>
+           </div>
+        </div>
+        <div class="main-content">
+            <div class="storygal">
+                <div class="story">
+                   <img src="upload.png">
+                   <p><b>Post Story</b></p>
+                </div>
+                <div class="story1">
+                   <img src="member-1.png">
+                   <p><b>Trisha</b></p>
+                </div>
+                <div class="story1">
+                   <img src="member-2.png">
+                   <p><b>Anish</b></p>
+                </div>
+                <div class="story1">
+                   <img src="member-3.png">
+                   <p><b>Adri</b></p>
+                </div>
+                <div class="story1">
+                    <img src="member-6.png">
+                    <p><b>Adrij</b></p>
+                </div>
+                <div class="story1">
+                   <img src="member-4.png">
+                   <p><b>Anish</b></p>
+                </div>
+            </div>
+            <div class="writepost">
+                <div class="user-profile">
+                    <img src="image1.png.jpg">
+         
+                </div>
+                <div class="image">
+                <button onclick="like()"> <img src="like.jpeg"></button>
+                <p id="likeCount"><b>0 Like</b></p>
+   
+                <script>
+                    let likeCount = 0;
+   
+                    function like() {
+                        likeCount++;
+                        document.getElementById('likeCount').textContent = likeCount + (likeCount === 1 ? ' Like' : ' Likes');
+                    }
+                </script>
+            </div>
+        <div class="image">
+           <button onclick="Dislike()"> <img src="Dislike.jpeg"></button>
+           <p id="likeCount1"><b>0 Dislike</b></p>
+       
+           <script>
+               let likeCount1 = 0;
+       
+               function Dislike() {
+                   likeCount1++;
+                   document.getElementById('likeCount1').textContent = likeCount1 + (likeCount1 === 1 ? ' Dislike' : ' Dislikes');
+               }
+           </script>
+        </div>
+       <p><b>Doctors recommended for COVID-19 Tests</b></p>
+       <small>Public</small>
+       
+       <div class="comment">
+           <p>First comment.</p>
+           <button onclick="likeComment(1)"> <img src="download.png"></button>
+           <span id="likes_1">0</span> Likes
+       </div>
+   
+       <div class="comment">
+           <p>Second comment.</p>
+           <button onclick="likeComment(2)">
+           <img src="download.png"></button>
+           <span id="likes_2">0</span> Likes
+       </div>
+   
+   
+       <script>
+       
+           function likeComment(commentId) {
+         
+               var likeCountElement = document.getElementById('likes_' + commentId);
+   
+             
+               var currentLikes = parseInt(likeCountElement.textContent);
+   
+            
+               var newLikes = currentLikes + 1;
+   
+               
+               likeCountElement.textContent = newLikes;
+           }
+       </script>
+      </div>
+    </div>
+    <div class="right-sidebar">
+        <div class="sidebartitle">
+           <h4><b>Events</b></h4>
+           
+       </div> 
+       <div class="event">
+           <div class="leftevent">
+               <h3>18</h3>
+               <span>September</span>
+           </div>
+           <div class="rightevent">
+               <h4>Doctor's appointment</h4>
+               <p>Dr.Suman Chatterjee</p>
+               <p> Virologist</p>
+               <a href="#">More info</a>
+           </div>
+       </div>
+       <div class="event">
+           <div class="leftevent">
+               <h3>22</h3>
+               <span>October</span>
+           </div>
+           <div class="rightevent">
+               <h4>Doctor's appointment</h4>
+               <p>Dr.Abir Roy</p>
+               <p>Pulmonologist</p>
+               <a href="#">More info</a>
+           </div>
+           
+        </div>
+        <a href="#" class="blue">See All</a>
+        <div class="sidebartitle">
+           <h4>Conversation</h4>
+        </div>
+        <div class="onlinelist">
+           <div class="online">
+           <img src="member-1.png">
+        </div>
+        <p>Trisha Pal</p>
+       </div>
+       <div class="onlinelist">
+           <div class="online">
+           <img src="member-3.png">
+        </div>
+        <p>Asmi Chatterjee</p>
+       </div>
+       <div class="onlinelist">
+           <div class="online">
+           <img src="member-2.png">
+        </div>
+        <p>Rizwan</p>
+       </div>
+       <a href="#" class="blue">Hide chat</a>
+    </div>
+    
+    </div>
+    
+    
+</body>
+<script src="script.js"></script>
+<footer class="footer">
+    <div class="container">
+        <div class="footer-content">
+            <div class="footer-section about">
+                <h2>About Us</h2>
+                <p>We Expected the Unexpected.</p>
+                <div class="social-links">
+                    <a href="#" class="fa fa-facebook"></a>
+                    <a href="#" class="fa fa-twitter"></a>
+                    <a href="#" class="fa fa-linkedin"></a>
+                    <a href="#" class="fa fa-instagram"></a>
+                </div>
+            </div>
+            <div class="footer-section quick-links">
+                <h2>Quick Links</h2>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Services</a></li>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Contact</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                </ul>
+            </div>
+            <div class="footer-section contact">
+                <h2>Contact Us</h2>
+                <p>Email: unitedhealth24X7@gmail.com</p>
+                <p>Phone: +91 9876543210</p>
+            </div>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <p>&copy; 2023 United Home Healthcare. All rights reserved.</p>
+    </div>
+</footer>
+</html>
